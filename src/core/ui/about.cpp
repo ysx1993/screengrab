@@ -31,15 +31,8 @@ AboutDialog::AboutDialog(QWidget *parent):
     _ui->setupUi(this);
     _ui->labAppName->setText(_ui->labAppName->text() + QString(" <b>") + qApp->applicationVersion() + QString("</b>"));
 
-    QString versionInfo;
-    versionInfo = tr("built on ");
-    versionInfo.append(__DATE__);
-    versionInfo.append(" ");
-    versionInfo.append(__TIME__);
 
     _ui->labQtVer->setText(tr("using Qt ") + qVersion());
-
-    _ui->labVersion->setText(versionInfo);
 
     QTabBar *tabs = new QTabBar;
 
@@ -111,17 +104,15 @@ QString AboutDialog::tabAbout()
     str += tr("It is a light and powerful application and has been written using the Qt framework, so that you are able to use in Windows and Linux.");
     str += "<br><br>";
 
-    str += tr("E-Mail")+" - ";
-    str += "<a href=mailto:doomer3d@gmail.com>doomer3d@gmail.com</a>";
-    str += "<br>";
     str += tr("Web site")+" - ";
-    str += "<a href=http://screengrab.doomer.org>http://screengrab.doomer.org/</a>";
+    str += "<a href=https://github.com/QtDesktop/screengrab>https://github.com/QtDesktop/screengrab</a>";
     str += "<br><br>";
 
     str += tr("Licensed under the ");
     str += " <a href=http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>GPL v2</a>";
     str += "<br><br>";
 
+    str += tr("Copyright &copy; 2013-2016, QtDesktop Team");
     str += tr("Copyright &copy; 2009-2013, Artem 'DOOMer' Galichkin");
     return str;
 }
@@ -140,13 +131,10 @@ QString AboutDialog::tabHelpUs()
     str += "<li>" + tr("Report bugs and issues") + "</li>";
     str += "</ul>";
 
-    str += tr("E-Mail");
-    str += "<br>";
-    str += "<a href=mailto:doomer3d@gmail.com>mailto:doomer3d@gmail.com</a>";
     str += "<br><br>";
     str += tr("Bug tracker");
     str += "<br>";
-    str += "<a href=https://github.com/DOOMer/screengrab/issues>https://github.com/DOOMer/screengrab/issues/</a>";
+    str += "<a href=https://github.com/QtDesktop/screengrab/issues>https://github.com/QtDesktop/screengrab/issues/</a>";
 
     return str;
 }
