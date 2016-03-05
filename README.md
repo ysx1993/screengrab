@@ -53,10 +53,9 @@ Screengrab is licensed under the GPL v2. See file LICENSE in docs directory for 
 Contacts
 --------
 
-E-mail: doomer3d@gmail.com
-Jabber: doomer@jabber.linux.it
-Web homepage: http://screengrab.doomer.org/
+Homepage: https://github.com/QtDesktop/screengrab
+Issues: https://github.com/QtDesktop/screengrab/issues
 
-
+Copyright (c) 2013-2016, QtDesktop Team
 Copyright (c) 2009-2013, Artem 'DOOMer' Galichkin
 
