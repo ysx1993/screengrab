@@ -31,7 +31,6 @@ AboutDialog::AboutDialog(QWidget *parent):
     _ui->setupUi(this);
     _ui->labAppName->setText(_ui->labAppName->text() + QString(" <b>") + qApp->applicationVersion() + QString("</b>"));
 
-
     _ui->labQtVer->setText(tr("using Qt ") + qVersion());
 
     QTabBar *tabs = new QTabBar;
@@ -112,7 +111,7 @@ QString AboutDialog::tabAbout()
     str += " <a href=http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>GPL v2</a>";
     str += "<br><br>";
 
-    str += tr("Copyright &copy; 2013-2016, QtDesktop Team");
+    str += tr("Copyright &copy; 2013-2016, QtDesktop Team <br>");
     str += tr("Copyright &copy; 2009-2013, Artem 'DOOMer' Galichkin");
     return str;
 }
