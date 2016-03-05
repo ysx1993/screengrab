@@ -38,31 +38,12 @@ find_package(
     X11_XCB MODULE
 )
 
-# add version define
-set(SCREENGRAB_VERSION "1.95")
-set(SCREENGRAB_VERSION_DEV "2.0-beta1")
-# set(DEV_BUILD True)
+set(SCREENGRAB_VERSION "2.0")
 
-if(SCREENGRAB_VERSION_DEV)
-    if(DEV_BUILD)
-        # search git executable
-        find_package(Git)
-        if(GIT_FOUND)
-        # executable git for check HEAD rev hash
-        execute_process(
-            COMMAND ${GIT_EXECUTABLE} rev-parse --short HEAD
-            OUTPUT_VARIABLE GIT_HASH
-            OUTPUT_STRIP_TRAILING_WHITESPACE
-        )
-        endif()
+if(DEV_VERSION)
+    set(VERSION "${DEV_VERSION}")
+endif(DEV_VERSION)
 
-        set(VERSION "${SCREENGRAB_VERSION}  (${SCREENGRAB_VERSION_DEV}-git-${GIT_HASH})")
-    else()
-        set(VERSION "${SCREENGRAB_VERSION}  (${SCREENGRAB_VERSION_DEV})")
-    endif()
-elseif(NOT SCREENGRAB_VERSION_DEV)
-    set(VERSION "${SCREENGRAB_VERSION}")
-endif(SCREENGRAB_VERSION_DEV)
 
 add_definitions(-DVERSION="${VERSION}")
 
