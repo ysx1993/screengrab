@@ -39,8 +39,8 @@ find_package(
 )
 
 # add version define
-set(SCREENGRAB_VERSION "1.95")
-set(SCREENGRAB_VERSION_DEV "2.0-beta1")
+set(SCREENGRAB_VERSION "2.0")
+set(SCREENGRAB_VERSION_DEV "2.0")
 # set(DEV_BUILD True)
 
 if(SCREENGRAB_VERSION_DEV)
