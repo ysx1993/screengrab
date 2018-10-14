@@ -1,7 +1,10 @@
-cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
-
-# set project's name
 project(screengrab)
+# CMP0000 - A minimum required CMake version must be specified.
+# Note that the command invocation must appear in the CMakeLists.txt
+# file itself; a call in an included file is not sufficient.
+cmake_minimum_required(VERSION 3.6.2 FATAL_ERROR)
+
+
 
 find_package(Qt5Widgets 5.7.1 REQUIRED)
 find_package(Qt5X11Extras 5.7.1 REQUIRED)
@@ -84,7 +87,7 @@ message(STATUS "Library path: ${CMAKE_INSTALL_RPATH}")
 
 # options
 option(SG_GLOBALSHORTCUTS "Enable global shortcuts" OFF)
-option(SG_EXT_UPLOADS "Enable upload screenshots to Imgur" ON)
+option(SG_EXT_UPLOADS "Enable upload screenshots to Imgur" OFF)
 option(SG_EXT_EDIT "Enable ability to edit screenshots in external editor" ON)
 option(SG_DBUS_NOTIFY "Enable D-Bus notifications" ON)
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
